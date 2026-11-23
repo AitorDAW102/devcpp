@@ -4,32 +4,31 @@ using namespace std;
 
 int main(int argc, char** argv) {
 	
-	String nombres;
-	String telefonos[]=new String[50];
+	string nombres[50];
+	string telefonos[50];
 	int contador =0;
 	int option =0;
 	do {
-		System.out.println("====================================================");
-		System.out.println("MENU");
-		System.out.println();
-		System.out.println("1. Introducir un contacto");
-		System.out.println("2. Leer agenda");
-			System.out.println("Introduce una opcion (0 para salir)");
-		System.out.println("====================================================");
-		System.out.print(": ");
-		option=sc.nextInt();sc.nextLine();			
+		cout << "\n ====================================================";
+		cout << "\n MENU";
+		cout << "\n 1. Introducir un contacto";
+		cout << "\n 2. Leer agenda";
+		cout << "\n Introduce una opcion (0 para salir)";
+		cout << "\n ====================================================";
+		cout << "\n : ";
+		cin >> option;			
 		if (option == 1) {
-			System.out.println("Introduce el nombre: ");
-			nombres[contador]=sc.nextLine();
-			System.out.println("Introduce el telefono: ");
-			telefonos[contador]=sc.nextLine();
+			cout << "\n Introduce el nombre: ";
+			cin >> nombres[contador];
+			cout << "\n Introduce el telefono: ";
+			cin >> telefonos[contador];
 			contador++;
 		} else if (option == 2) {
 			for(int i=0; i<contador;i++) {
-				System.out.println("nombre: "+nombres[i]+", telefono: "+telefonos[i]);
+				cout << "\n nombre: " << nombres[i] << ", telefono: " << telefonos[i];
 		}
 		} else if (option!=0){
-		System.out.println("Opcion incorrecta");
+		cout << "\n Opcion incorrecta";
 		}
 	} while (option!=0);
 	return 0;
